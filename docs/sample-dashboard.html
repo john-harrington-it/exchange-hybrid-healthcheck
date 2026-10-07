@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exchange Hybrid Health Check</title>
+<style>
+:root{--bg:#0b1220;--panel:#111a2e;--line:#22304d;--text:#e2e8f0;--muted:#94a3b8;--Pass:#22c55e;--Warning:#f59e0b;--Fail:#ef4444;--Info:#38bdf8;--Skipped:#64748b}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:26px 32px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:22px}.meta{color:var(--muted);font-size:13px}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-weight:600;font-size:12px;color:#0b1220}
+.big{font-size:16px;padding:8px 16px}
+.Pass{background:var(--Pass)}.Warning{background:var(--Warning)}.Fail{background:var(--Fail)}.Info{background:var(--Info)}.Skipped{background:var(--Skipped);color:#e2e8f0}
+main{padding:24px 32px;max-width:1400px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer}
+.card .n{font-size:28px;font-weight:700}.card .l{color:var(--muted)}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:22px}
+.cat{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--Skipped);border-radius:10px;padding:12px 14px}
+.cat.Pass{border-left-color:var(--Pass)}.cat.Warning{border-left-color:var(--Warning)}.cat.Fail{border-left-color:var(--Fail)}.cat.Info{border-left-color:var(--Info)}
+.cat{background:var(--panel);color:var(--text)}.cat b{display:block}.cat span{color:var(--muted);font-size:12px}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--Info);font-weight:600}td.d{color:#cbd5e1;min-width:320px}
+footer{color:var(--muted);font-size:12px;padding:6px 32px 28px}
+</style></head><body>
+<header><div><h1>Exchange Hybrid Health Check</h1><div class="meta">Generated 2026-10-07 17:28 from MGMT01. Read-only checks; no configuration was changed.</div></div>
+<span class="pill big Fail">Overall: Action required</span></header><main>
+<div class="grid">
+<div class="card" data-filter="Fail"><div class="n">1</div><div class="l"><span class="pill Fail">Fail</span></div></div>
+<div class="card" data-filter="Warning"><div class="n">8</div><div class="l"><span class="pill Warning">Warning</span></div></div>
+<div class="card" data-filter="Pass"><div class="n">29</div><div class="l"><span class="pill Pass">Pass</span></div></div>
+<div class="card" data-filter="Info"><div class="n">0</div><div class="l"><span class="pill Info">Info</span></div></div>
+<div class="card" data-filter="Skipped"><div class="n">0</div><div class="l"><span class="pill Skipped">Skipped</span></div></div>
+</div><div class="cats">
+<div class="cat Warning"><b>Certificates</b><span>6 check(s), 2 issue(s)</span></div>
+<div class="cat Warning"><b>Databases and DAG</b><span>12 check(s), 2 issue(s)</span></div>
+<div class="cat Warning"><b>Hybrid configuration</b><span>8 check(s), 2 issue(s)</span></div>
+<div class="cat Pass"><b>Mail flow connectors</b><span>5 check(s), 0 issue(s)</span></div>
+<div class="cat Fail"><b>Migration batches</b><span>3 check(s), 2 issue(s)</span></div>
+<div class="cat Pass"><b>Services</b><span>2 check(s), 0 issue(s)</span></div>
+<div class="cat Warning"><b>Transport queues</b><span>2 check(s), 1 issue(s)</span></div>
+</div><section><table><thead><tr><th>Status</th><th>Category</th><th>Check</th><th>Target</th><th>Detail</th></tr></thead><tbody>
+<tr data-status="Fail"><td><span class="pill Fail">Fail</span></td><td>Migration batches</td><td>Failed migration user</td><td>records.archive@contoso.com</td><td class="d">Batch Wave2-Staff: TooManyLargeItemsPermanentException: mailbox contains items over the 150 MB limit</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Certificates</td><td>Certificate expiry</td><td>EX01</td><td class="d">CN=mail.contoso.com | Services: IMAP, POP, IIS, SMTP | expires 2026-10-30 (22 days) | Thumbprint 7A1C9E2B44D0F3A85E61B2C9D7F04E3A1B2C3D4E</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Certificates</td><td>Certificate expiry</td><td>EX02</td><td class="d">CN=mail.contoso.com | Services: IMAP, POP, IIS, SMTP | expires 2026-10-30 (22 days) | Thumbprint 7A1C9E2B44D0F3A85E61B2C9D7F04E3A1B2C3D4E</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Databases and DAG</td><td>Backup recency</td><td>DB-Journal</td><td class="d">Last backup 2026-10-03 17:28 (96 hours ago)</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Databases and DAG</td><td>DAG copy status</td><td>DB-Journal\EX02</td><td class="d">Content index FailedAndSuspended | Status: Mounted | CopyQueue: 0 | ReplayQueue: 0 | ContentIndex: FailedAndSuspended</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Hybrid configuration</td><td>Hybrid TLS certificate</td><td>EX01</td><td class="d">Found (7A1C9E2B44D0F3A85E61B2C9D7F04E3A1B2C3D4E); expires 2026-10-30 (22 days)</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Hybrid configuration</td><td>Hybrid TLS certificate</td><td>EX02</td><td class="d">Found (7A1C9E2B44D0F3A85E61B2C9D7F04E3A1B2C3D4E); expires 2026-10-30 (22 days)</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Migration batches</td><td>Migration batch status</td><td>Wave2-Staff</td><td class="d">Status: Synced | Total: 85 | Synced: 84 | Finalized: 0 | Failed: 1 | Last synced: 10/07/2026 11:28:13</td></tr>
+<tr data-status="Warning"><td><span class="pill Warning">Warning</span></td><td>Transport queues</td><td>Queue health</td><td>EX02\31</td><td class="d">Messages: 146 | Status: Retry | Next hop: contoso.mail.onmicrosoft.com | Delivery: SmartHostConnectorDelivery | Last error: 451 4.4.395 Target host responded with error. -&gt; 421 4.4.2 Connection dropped due to SocketError</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Certificates</td><td>Certificate expiry</td><td>EX01</td><td class="d">CN=EX01 | Services: SMTP | expires 2030-10-06 (1459 days) | Thumbprint 0F9E8D7C6B5A49382716051F2E3D4C5B6A798897</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Certificates</td><td>Certificate expiry</td><td>EX01</td><td class="d">CN=Microsoft Exchange Server Auth Certificate | Services: SMTP | expires 2027-11-21 (409 days) | Thumbprint 5B6A79889700F9E8D7C6B5A49382716051F2E3D4</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Certificates</td><td>Certificate expiry</td><td>EX02</td><td class="d">CN=EX02 | Services: SMTP | expires 2030-10-06 (1459 days) | Thumbprint 0F9E8D7C6B5A49382716051F2E3D4C5B6A798897</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Certificates</td><td>Certificate expiry</td><td>EX02</td><td class="d">CN=Microsoft Exchange Server Auth Certificate | Services: SMTP | expires 2027-11-21 (409 days) | Thumbprint 5B6A79889700F9E8D7C6B5A49382716051F2E3D4</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>Backup recency</td><td>DB-Staff</td><td class="d">Last backup 2026-10-06 21:28 (20 hours ago)</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>Backup recency</td><td>DB-Attorneys</td><td class="d">Last backup 2026-10-07 14:28 (3 hours ago)</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>DAG copy status</td><td>DB-Attorneys\EX02</td><td class="d">Status: Healthy | CopyQueue: 0 | ReplayQueue: 0 | ContentIndex: Healthy</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>DAG copy status</td><td>DB-Staff\EX02</td><td class="d">Status: Mounted | CopyQueue: 0 | ReplayQueue: 0 | ContentIndex: Healthy</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>DAG copy status</td><td>DB-Journal\EX01</td><td class="d">Status: Healthy | CopyQueue: 0 | ReplayQueue: 3 | ContentIndex: Healthy</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>DAG copy status</td><td>DB-Staff\EX01</td><td class="d">Status: Healthy | CopyQueue: 1 | ReplayQueue: 0 | ContentIndex: Healthy</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>DAG copy status</td><td>DB-Attorneys\EX01</td><td class="d">Status: Mounted | CopyQueue: 0 | ReplayQueue: 0 | ContentIndex: Healthy</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>Database mounted</td><td>DB-Journal</td><td class="d">Mounted on EX02 | Size: 95.4 GB</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>Database mounted</td><td>DB-Attorneys</td><td class="d">Mounted on EX01 | Size: 412.6 GB</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Databases and DAG</td><td>Database mounted</td><td>DB-Staff</td><td class="d">Mounted on EX02 | Size: 288.1 GB</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Hybrid configuration</td><td>Hybrid configuration object</td><td>On-premises</td><td class="d">Features: FreeBusy, MoveMailbox, Mailtips, MessageTracking, OwaRedirection, OnlineArchive, SecureMail, Photos | Domains: contoso.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Hybrid configuration</td><td>OAuth (intra-organization connector)</td><td>Exchange Online: HybridIOC - contoso</td><td class="d">Enabled: True | Discovery endpoint: https://mail.contoso.com/autodiscover/autodiscover.svc</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Hybrid configuration</td><td>OAuth (intra-organization connector)</td><td>On-premises: HybridIOC - contoso</td><td class="d">Enabled: True | Discovery endpoint: https://autodiscover-s.outlook.com/autodiscover/autodiscover.svc</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Hybrid configuration</td><td>On-premises organization object</td><td>Exchange Online</td><td class="d">contoso-onprem | Hybrid domains: contoso.com | Inbound connector: Inbound from contoso | Outbound connector: Outbound to contoso</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Hybrid configuration</td><td>Organization relationship</td><td>On-premises: On-premises to O365 - contoso</td><td class="d">Enabled | Domains: contoso.mail.onmicrosoft.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Hybrid configuration</td><td>Organization relationship</td><td>Exchange Online: O365 to On-premises - contoso</td><td class="d">Enabled: True | Free/busy: True</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Mail flow connectors</td><td>Inbound connector from on-premises</td><td>Exchange Online: Inbound from contoso</td><td class="d">TLS sender certificate: mail.contoso.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Mail flow connectors</td><td>Outbound connector to on-premises</td><td>Exchange Online: Outbound to contoso</td><td class="d">Smart hosts: mail.contoso.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Mail flow connectors</td><td>Receive connector TLS</td><td>On-premises: EX02\Default Frontend EX02</td><td class="d">TlsCertificateName: &lt;I&gt;CN=Example Issuing CA&lt;S&gt;CN=mail.contoso.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Mail flow connectors</td><td>Receive connector TLS</td><td>On-premises: EX01\Default Frontend EX01</td><td class="d">TlsCertificateName: &lt;I&gt;CN=Example Issuing CA&lt;S&gt;CN=mail.contoso.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Mail flow connectors</td><td>Send connector to Exchange Online</td><td>On-premises: Outbound to Office 365 - contoso</td><td class="d">Address space: smtp:contoso.mail.onmicrosoft.com;1 | TLS domain: mail.protection.outlook.com</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Migration batches</td><td>Migration batch status</td><td>Wave1-IT-Pilot</td><td class="d">Status: Completed | Total: 12 | Synced: 0 | Finalized: 12 | Failed: 0 | Last synced: 09/16/2026 17:28:13</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Services</td><td>Required services</td><td>EX01</td><td class="d">All required services running (1 role check(s)).</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Services</td><td>Required services</td><td>EX02</td><td class="d">All required services running (1 role check(s)).</td></tr>
+<tr data-status="Pass"><td><span class="pill Pass">Pass</span></td><td>Transport queues</td><td>Queue health</td><td>EX01</td><td class="d">1 queue(s), 2 message(s) queued, no issues.</td></tr>
+</tbody></table></section></main>
+<footer>Exchange Hybrid Health Check. Click a status card to filter; click again to clear.</footer>
+<script>document.querySelectorAll(".card").forEach(function(c){c.addEventListener("click",function(){var f=c.dataset.filter,on=c.classList.toggle("on");document.querySelectorAll(".card").forEach(function(o){if(o!==c)o.classList.remove("on")});document.querySelectorAll("tbody tr").forEach(function(r){r.style.display=(!on||r.dataset.status===f)?"":"none"})})})</script>
+</body></html>
+

@@ -1,0 +1,43 @@
+
+Status  Category             Check                                Target
+------  --------             -----                                ------
+Fail    Migration batches    Failed migration user                records.archive@contoso.com
+Warning Certificates         Certificate expiry                   EX01
+Warning Transport queues     Queue health                         EX02\31
+Warning Databases and DAG    Backup recency                       DB-Journal
+Warning Hybrid configuration Hybrid TLS certificate               EX02
+Warning Hybrid configuration Hybrid TLS certificate               EX01
+Warning Migration batches    Migration batch status               Wave2-Staff
+Warning Certificates         Certificate expiry                   EX02
+Warning Databases and DAG    DAG copy status                      DB-Journal\EX02
+Pass    Databases and DAG    DAG copy status                      DB-Journal\EX01
+Pass    Databases and DAG    DAG copy status                      DB-Attorneys\EX02
+Pass    Databases and DAG    DAG copy status                      DB-Staff\EX02
+Pass    Databases and DAG    Database mounted                     DB-Journal
+Pass    Databases and DAG    Backup recency                       DB-Staff
+Pass    Databases and DAG    Database mounted                     DB-Staff
+Pass    Databases and DAG    Backup recency                       DB-Attorneys
+Pass    Databases and DAG    Database mounted                     DB-Attorneys
+Pass    Transport queues     Queue health                         EX01
+Pass    Databases and DAG    DAG copy status                      DB-Staff\EX01
+Pass    Databases and DAG    DAG copy status                      DB-Attorneys\EX01
+Pass    Mail flow connectors Outbound connector to on-premises    Exchange Online: Outbound to contoso
+Pass    Services             Required services                    EX01
+Pass    Certificates         Certificate expiry                   EX01
+Pass    Certificates         Certificate expiry                   EX01
+Pass    Certificates         Certificate expiry                   EX02
+Pass    Certificates         Certificate expiry                   EX02
+Pass    Hybrid configuration Hybrid configuration object          On-premises
+Pass    Hybrid configuration Organization relationship            On-premises: On-premises to O365 - contoso
+Pass    Migration batches    Migration batch status               Wave1-IT-Pilot
+Pass    Hybrid configuration OAuth (intra-organization connector) On-premises: HybridIOC - contoso
+Pass    Hybrid configuration Organization relationship            Exchange Online: O365 to On-premises - contoso
+Pass    Hybrid configuration OAuth (intra-organization connector) Exchange Online: HybridIOC - contoso
+Pass    Mail flow connectors Send connector to Exchange Online    On-premises: Outbound to Office 365 - contoso
+Pass    Mail flow connectors Receive connector TLS                On-premises: EX01\Default Frontend EX01
+Pass    Mail flow connectors Receive connector TLS                On-premises: EX02\Default Frontend EX02
+Pass    Mail flow connectors Inbound connector from on-premises   Exchange Online: Inbound from contoso
+Pass    Hybrid configuration On-premises organization object      Exchange Online
+Pass    Services             Required services                    EX02
+
+
