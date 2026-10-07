@@ -1,5 +1,6 @@
 # Exchange Hybrid Health Check
 
+[![CI](https://github.com/john-harrington-it/exchange-hybrid-healthcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/john-harrington-it/exchange-hybrid-healthcheck/actions/workflows/ci.yml)
 ![PowerShell 5.1 | 7.x](https://img.shields.io/badge/PowerShell-5.1%20%7C%207.x-5391FE?logo=powershell&logoColor=white)
 ![Pester 5](https://img.shields.io/badge/tests-Pester%205-2ea44f)
 ![PSScriptAnalyzer clean](https://img.shields.io/badge/PSScriptAnalyzer-0%20findings-2ea44f)
